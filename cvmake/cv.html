@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- divinectorweb.com -->
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV WebSite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+</head>
+<body>    
+    <div class="container">
+      <div class="header">
+        <div class="img-area">
+            <img src="Adem.jpg" alt="">
+        </div>
+        <h1 id="name">Adem Çeper</h1>
+        <h3>Full-Stack Developer</h3>
+      </div>
+
+      <div class="main">
+        <div class="left">
+          <h2>Personal Information</h2>
+          <p><strong>Name:</strong> Adem Çeper</p>
+          <p><strong>Age:</strong> 26</p>
+          <p><strong>Email:</strong> ceperadem@outlook.com</p>
+          <p><strong>Phone:</strong> 506 136 5537</p>
+          <h2>Skills</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+            <li>SQL</li>
+          </ul>
+          <h2>Education</h2>
+          <h3>Economy</h3>
+          <p>University of Kafkas, 2016-2020</p> <br>
+          <h3>Computer Programming</h3>
+          <p>University of Istanbul, 2022</p>
+        </div>
+        
+        <div class="right">
+          <h2>Work Experience</h2>
+          <h3>Gempa</h3>
+          <p><strong>Position:</strong> Finance and accounting specialist </p>
+          <p><strong>Duration:</strong> 2020</p>
+          <p>I developed Web applications using HTML CSS Javascript SQL and .NET desktop applications using Windows Form and C#</p>
+           <br>
+            <h2>
+                Social Media
+            </h2>
+            <span><a href="https://www.instagram.com/ceperadew/"><i class="fa-brands fa-instagram" style="font-size: 40px;"></i></a></span>
+            <span><a href="https://github.com/ademceper"><i class="fa-brands fa-github" style="font-size: 40px;"></i></a></span>
+            <span><a href="https://www.linkedin.com/in/adem-%C3%A7eper-b38746275/"><i class="fa-brands fa-linkedin" style="font-size: 40px;"></i></a></span>
+        </div>
+        
+    </div>
+    <button style="padding: 10px;background-color: #007BFF;border: 1px solid;border-radius: 10px;" id="add">Düzenle</button>
+    <div class="form-container" style="display: none;" id="form">
+        <h1>Personel Bilgi Formu</h1>
+        <form  action="#" method="post" >
+            <section>
+                <h2>Personel Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="form-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Skill</h2>
+                <div class="skills" id="Skill">
+                    <div class="form-group">
+                        <input type="text" name="skill" placeholder="Skill">
+                    </div>
+                    
+                </div>
+                <button type="button" class="add-skill" id="add-skill">Add Skill</button>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <div class="education" id="Education">
+                    <div class="form-group">
+                        <input type="text" name="education" placeholder="Bölüm">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="education" placeholder="Üniversite">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="education" placeholder="Yıllar">
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                </div>
+                <button type="button" class="add-education" id="add-education">Add Education</button>
+
+            </section>
+
+            <section>
+                <h2>Work Experience</h2>
+                <div class="work-experience" id="Experience">
+                    <div class="form-group">
+                        <input type="text" name="work" placeholder="Firma">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="work" placeholder="Position">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="work" placeholder="Duration">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="work-description" rows="3" placeholder="Job Description"></textarea>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                </div>
+                <button type="button" class="add-work" id="add-experience">Add Experience</button>
+
+            </section>
+
+            <section>
+                <h2>Social Media</h2>
+                <div class="form-group">
+                    <label for="instagram">Instagram</label>
+                    <input type="url" id="linkedin" name="linkedin">
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="url" id="linkedin" name="linkedin">
+                </div>
+                <div class="form-group">
+                    <label for="facebook">Facebook</label>
+                    <input type="url" id="facebook" name="facebook">
+                </div>
+            </section>
+
+            <button type="submit" onclick="veriyiEkle()" id="form-add">Gönder</button>
+            <button class="close-button" id="close">Kapat</button>
+        </form>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

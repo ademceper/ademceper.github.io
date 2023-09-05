@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+body {
+    min-height: 100vh;
+    background: url(kseniya-lapteva-xw8dKzrjXbk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+span {
+    color: #BB2525;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+
+}
+
+header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgb(121, 86, 86),transparent);
+    transition: .7s;
+}
+.header:hover::after{
+    left: 100%;
+}
+.Logo {
+    font-size: 2rem;
+    color: #352F44;
+    font-weight: 700;
+}
+.navbar a{
+    font-size: 1.15rem;
+    color: white;
+    font-weight: 700;
+    margin-left: 2.5rem;
+}
+#check{
+    display: none;
+}
+.icons{
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 990px) {
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+@media (max-width: 750px){
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    
+    .icons{
+        display: block;
+    }
+    #close-icon {
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(2px);
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+  
+}
